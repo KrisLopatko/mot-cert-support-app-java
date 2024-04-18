@@ -37,7 +37,7 @@
                 <configuration>
                     <classifier>exec</classifier>
                 </configuration>
-                <executions>x
+                <executions>
                     <execution>
                         <goals>
                             <goal>repackage</goal>
