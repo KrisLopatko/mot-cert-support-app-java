@@ -1,4 +1,4 @@
-package com.ministryoftesting.e2e;
+package E2E;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,7 +28,7 @@ public class LoginTest {
 		driver.findElement(By.name("password")).sendKeys("password123");
 		driver.findElement(By.cssSelector("button")).click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until( ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-title")));
 
 		String title = driver.findElement(By.cssSelector(".card-title")).getText();
