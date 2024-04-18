@@ -37,7 +37,7 @@
                 <configuration>
                     <classifier>exec</classifier>
                 </configuration>
-                <executions>
+                <executions>x
                     <execution>
                         <goals>
                             <goal>repackage</goal>
@@ -197,13 +197,13 @@
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.14.1</version>
+        <version>4.19.1</version>
     </dependency>
     <!-- WebDriver Manager -->
     <dependency>
         <groupId>io.github.bonigarcia</groupId>
         <artifactId>webdrivermanager</artifactId>
-        <version>5.5.3</version>
+        <version>5.6.3</version>
     </dependency>
     <!-- ApprovalTests -->
     <dependency>
