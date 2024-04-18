@@ -1,2 +1,12 @@
-package com.ministryoftesting;public class ExampleTest {
+package com.ministryoftesting;
+
+import org.junit.jupiter.api.Test;
+
+public class ExampleTest {
+
+	@Test
+	public void shellTest() {
+		System.out.println("This is a shell test");
+	}
+
 }
