@@ -17,11 +17,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginTest {
 	@Test
 	public void testPageUpdatesToProjectPageAfterLogin() {
-//		WebDriverManager.chromedriver().setup();
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--headless");
-//		WebDriver driver = new ChromeDriver(options);
-		WebDriver driver = new ChromeDriver();
+		//WebDriverManager.chromedriver().clearDriverCache().setup();
+		//WebDriverManager.chromedriver().setup();
+		WebDriverManager wdm = WebDriverManager.chromedriver().driverVersion("123");
+		wdm.clearDriverCache().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+//		options.addArguments("--public");
+		WebDriver driver = new ChromeDriver(options);
+		//WebDriver driver = new ChromeDriver();
 
 		driver.get("http://localhost:8080");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
