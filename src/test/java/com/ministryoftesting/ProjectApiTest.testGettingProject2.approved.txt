@@ -1,0 +1,13 @@
+{
+    "name": "Project 2",
+    "description": "This is the second project",
+    "total": 2,
+    "entries": [
+        {
+            "id": 2,
+            "date": "2020-01-01",
+            "hours": 2,
+            "description": "This is the second entry"
+        }
+    ]
+}
