@@ -3,3 +3,4 @@ INSERT INTO USERS (username, email, password, role) VALUES ('user', 'user@test.c
 INSERT INTO PROJECTS (name, description) VALUES ('Project 1', 'This is the first project');
 INSERT INTO PROJECTS (name, description) VALUES ('Project 2', 'This is the second project');
 INSERT INTO ENTRIES (projectid, date, hours, description) VALUES (1, '2019-01-01', 2, 'This is the first entry');
+INSERT INTO ENTRIES (projectid, date, hours, description) VALUES (2, '2020-01-01', 2, 'This is the second entry');

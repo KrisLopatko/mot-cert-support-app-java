@@ -29,9 +29,12 @@ public class BaseDB {
             connection = ds.getConnection();
             executeSqlFile("db.sql");
             executeSqlFile("seed.sql");
-            if(System.getenv("dbServer").equals("true")){
-                Server.createTcpServer("-tcpPort", "9090", "-tcpAllowOthers").start();
-            }
+            Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9090").start();
+            logger.info("create server code was executed");
+           if(System.getenv("dbServer").equals("true")){
+               Server.createTcpServer("-tcpPort", "9090", "-tcpAllowOthers").start();
+               logger.info("create server code was executed");
+           }
         } catch (NullPointerException e) {
             logger.info("DB server mode disabled");
         } catch (SQLException | IOException e) {
