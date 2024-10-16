@@ -26,7 +26,10 @@ public class AuthController {
         if(authService.validate(token.getToken(), LocalDate.now()))
             return new ResponseEntity<>(HttpStatus.OK);
         else
+            System.out.println(token);
+        System.out.println(LocalDate.now());
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+
     }
 
     @RequestMapping(value = "/v1/auth/login", method = RequestMethod.POST)
